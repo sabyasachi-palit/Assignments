@@ -72,7 +72,16 @@ class Assignment
 		#10. Write a method which will take a string input and two numbers (start_position, end_position) input and will return the substring.eg: If the string is "Hello World" and start_position is 7, end position is 11 then it will return 'World'.
 		def strsplit(str,startpos,endpos)
 
-			puts str[(startpos-1)..endpos];
+			strlength = str.length;
+
+			if ((startpos < strlength) && (endpos < strlength))
+
+				puts str[(startpos-1)..endpos];
+
+			else
+
+				puts "Start & End position must be less the string length";
+			end
 
 		end
 
